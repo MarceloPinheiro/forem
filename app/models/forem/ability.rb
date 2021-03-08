@@ -53,7 +53,7 @@ module Forem
       end
       
       can :moderate, Forem::Forum do |forum|
-        user.can_moderate_forem_forum?(forum) || user.forem_admin?
+        user.forem_admin?
       end
 
       #include any abilities registered by extensions, etc.
